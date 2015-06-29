@@ -153,7 +153,7 @@ function genericradio_plugin_action()
                 function ($_, &$response) {
                     global $conf;
                     $conf->put('plugin_genericRadio_emitter_pin', $_['emiterPin']);
-                    $conf->put('plugin_genericRadio_plugin_genericRadio_receiver_pin', $_['receiverPin']);
+                    $conf->put('plugin_genericRadio_receiver_pin', $_['receiverPin']);
                     $response['message'] = 'Configuration enregistrée';
                 },
                 array('plugin_genericradio'=>'c')
@@ -195,7 +195,7 @@ function genericradio_plugin_action()
                 function ($_, &$response) {
                     global $conf;
                     $conf->put('plugin_genericRadio_emitter_pin', $_['emiterPin']);
-                    $conf->put('plugin_genericRadio_emitter_code', $_['emiterCode']);
+                    $conf->put('plugin_genericRadio_receiver_pin', $_['receiverPin']);
                     $response['message'] = 'Configuration modifiée avec succès';
                 },
                 array('plugin_genericradio'=>'u')
@@ -374,6 +374,28 @@ function genericradio_plugin_action()
                 $widget->save();
                 echo $content;
             break;
+
+        case 'genericRadio_rcswitchdetect':
+                    if($conf->get('plugin_genericRadio_receiver_pin') == ""){
+                        $conf->put('plugin_genericRadio_receiver_pin', 7);
+                    }
+                    $cmd = dirname(__FILE__).'/RCreceive '.$conf->get('plugin_genericRadio_receiver_pin');
+                    $answer = system($cmd,$out);
+                    if($answer != "Wrong GPIO" && $out == 1){
+                        echo "Check Permissions";
+                    }
+                    break;
+
+        case 'genericRadio_chacondetect':
+                     if($conf->get('plugin_genericRadio_receiver_pin') == ""){
+                        $conf->put('plugin_genericRadio_receiver_pin', 7);
+                    }
+                    $cmd = dirname(__FILE__).'/HEreceive '.$conf->get('plugin_genericRadio_receiver_pin');
+                    $answer = system($cmd,$out);
+                    if($answer != "Wrong GPIO" && $out == 1){
+                        echo "Check Permissions";
+                    }
+        break;
     }
 }
 
@@ -497,9 +519,16 @@ function genericRadio_plugin_setting_page()
 
                             <label for="radioCodeGenericRadioOn">Code radio ON</label>
                             <input type="text" value="<?php echo $selected->radiocodeOn; ?>" name="radioCodeGenericRadioOn" id="radioCodeGenericRadioOn" placeholder="1:1234" />
+                            <div class="input-append">
+                                <span onclick="plugin_genericradio_detectcode(this,'radioCodeGenericRadioOn','rcswitch')" class="btn">SCAN RCSwitch</span>
+                                <span onclick="plugin_genericradio_detectcode(this,'radioCodeGenericRadioOn','chacon')" class="btn">SCAN Chacon</span>
+                            </div>
                             <label for="radioCodeGenericRadioOff">Code radio OFF</label>
                             <input type="text" value="<?php echo $selected->radiocodeOff; ?>" name="radioCodeGenericRadioOff" id="radioCodeGenericRadioOff" placeholder="1:1234" />
-
+                            <div class="input-append">
+                                <span onclick="detectcode(this,'radioCodeGenericRadioOff','rcswitch')" class="btn">SCAN RCSwitch</span>
+                                <span onclick="detectcode(this,'radioCodeGenericRadioOff','chacon')" class="btn">SCAN Chacon</span>
+                            </div>
                             <label for="onGenericRadio">Commande vocale "ON" associée</label>
                             <?php echo $conf->get('VOCAL_ENTITY_NAME') ?>, <input type="text" id="onGenericRadio" value="<?php echo $selected->onCommand; ?>" placeholder="Allume la lumière, Ouvre le volet…"/>
 
@@ -665,15 +694,15 @@ function genericRadio_plugin_preference_page()
                             <?php } ?>
 
                                 <a class="btn btn-warning" href="setting.php?section=genericRadio">Liste relais</a>
-                                
+                                <div class="settings">
                                     <p>Pin Emetteur Radio</p>
-                                    <input type="text" class="input-large" name="emiterPin" value="<?php echo $conf->get('plugin_genericRadio_emitter_pin');;?>" placeholder="0">
+                                    <input type="text" class="input-large" id="emiterPin" name="emiterPin" value="<?php echo $conf->get('plugin_genericRadio_emitter_pin');?>" placeholder="0">
 
                                     <p>Pin Récepteur Radio (pour détecter les codes radios)</p>
-                                    <input type="text" class="input-large" name="receiverPin" value="<?php echo $conf->get('plugin_genericRadio_receiver_pin');;?>" placeholder="7">
+                                    <input type="text" class="input-large" id="receiverPin" name="receiverPin" value="<?php echo $conf->get('plugin_genericRadio_receiver_pin');?>" placeholder="7">
                                     <br>
                                     <button onclick="plugin_genericradio_save_settings(this);" class="btn">Enregistrer</button>
-
+                                </div>
              
                             </div>
                             <h1>GPIO WiringPi</h1>

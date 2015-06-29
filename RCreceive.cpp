@@ -17,7 +17,7 @@
    int pin;
    int received_code;
    int ok_code = 0;
-   int wait_cycles = 100000000;
+   int wait_cycles = 100;
 
    if(argc == 2) //Verify if there is an argument
    {
