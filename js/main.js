@@ -14,7 +14,7 @@ function plugin_genericradio_set_icon(element,icon){
 function plugin_genericradio_save_settings(element){
 	var form = $(".settings");
  	var data = form.toData();
- 	data.action = 'genericRadio_plugin_setting'
+ 	data.action = 'genericRadio_plugin_setting';
 	$.action(data,
 		function(response){
 			alert(response.message);
@@ -26,7 +26,7 @@ function plugin_genericradio_save_settings(element){
 function plugin_genericradio_save(element){
 	var form = $(element).closest('fieldset');
  	var data = form.toData();
- 	data.action = 'genericRadio_save_genericRadio'
+ 	data.action = 'genericRadio_save_genericRadio';
 	$.action(data,
 		function(response){
 			alert(response.message);
@@ -41,7 +41,7 @@ function plugin_genericradio_import(element){
 	var form = $(".import");
  	var data = form.toData();
  	console.log(data);
- 	data.action = 'genericRadio_import_genericRadio'
+ 	data.action = 'genericRadio_import_genericRadio';
 	$.action(data,
 		function(response){
 			alert(response.message);
@@ -82,7 +82,7 @@ function plugin_genericradio_detectcode(detectbtn,text_field,type){
 	$.ajax({
 		url: url
 	}).done(function(answer) {
-		answer = answer.trim()
+		answer = answer.trim();
 		switch(answer){
 			case "Check Permissions":
 			alert("Impossible de récupérer un code radio \n Vérifier les permissions, dans Préférences -> Relai RCSwitch");

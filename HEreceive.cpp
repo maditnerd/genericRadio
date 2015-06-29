@@ -43,7 +43,7 @@ using namespace std;
 int pin;
 int received_code;
 int ok_code = 0;
-int wait_cycles = 2;
+int wait_cycles = 1;
 
 //Fonction de log
 void log(string a){

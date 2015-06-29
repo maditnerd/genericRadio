@@ -73,25 +73,24 @@ function genericradio_plugin_action()
             break;
 
         case 'genericRadio_import_genericRadio':
-         Action::write(
+            Action::write(
                 function ($_, &$response) {
                     $exportRadios = json_decode($_POST["import"]);
                     //var_dump($exportRadios);
-                    if($exportRadios){
+                    if ($exportRadios) {
                           $roomManager = new Room();
                           $nbRoom = $roomManager->rowCount();
                           //var_dump($nbRoom);
                           
-                            foreach($exportRadios as $exportRadio){    
+                        foreach ($exportRadios as $exportRadio) {
                                  $genericRadio = new GenericRadio();
                                  $genericRadio->name = $exportRadio->name;
                                  $genericRadio->description = $exportRadio->description;
-                                 if($exportRadio->room <= $nbRoom){
+                            if ($exportRadio->room <= $nbRoom) {
                                     $genericRadio->room = $exportRadio->room;
-                                 }
-                                 else{
+                            } else {
                                     $genericRadio->room = 1;
-                                 }
+                            }
 
                                  $genericRadio->onCommand = $exportRadio->onCommand;
                                  $genericRadio->offCommand = $exportRadio->offCommand;
@@ -99,37 +98,11 @@ function genericradio_plugin_action()
                                  $genericRadio->radiocodeOn = $exportRadio->radiocodeOn;
                                  $genericRadio->radiocodeOff = $exportRadio->radiocodeOff;
                                  $genericRadio->save();
-                                 $response['message'] = 'Relais importés avec succès';                  
-                         }
-                         
-                    }
-                    else
-                    {
+                                 $response['message'] = 'Relais importés avec succès';
+                        }
+                    } else {
                         throw new Exception("Les valeurs importés sont incorrectes, vérifier les dans un lecteur JSON");
                     }
-                    
-                    //
-
-                    //if (empty($_['nameGenericRadio'])) {
-                        //throw new Exception("Le nom est obligatoire");
-                    //}
-                   // if (!is_numeric($_['radioCodeGenericRadio'])) {
-                   //     throw new Exception("Le code radio est obligatoire et doit être numerique");
-                   // }
-                    //var_dump($_);
-                    /*
-                    $genericRadio = !empty($_['id']) ? $genericRadioManager->getById($_['id']): new GenericRadio();
-                    $genericRadio->name = $_['nameGenericRadio'];
-                    $genericRadio->description = $_['descriptionGenericRadio'];
-                    $genericRadio->room = $_['roomGenericRadio'];
-                    $genericRadio->onCommand = $_['onGenericRadio'];
-                    $genericRadio->offCommand = $_['offGenericRadio'];
-                    $genericRadio->icon = $_['iconGenericRadio'];
-                    $genericRadio->radiocodeOn = $_['radioCodeGenericRadioOn'];
-                    $genericRadio->radiocodeOff = $_['radioCodeGenericRadioOff'];
-                    $genericRadio->save();
-                    $response['message'] = 'Relais enregistré avec succès';
-                    */
                 },
                 array('plugin_genericradio'=>'c')
             );
@@ -376,26 +349,26 @@ function genericradio_plugin_action()
             break;
 
         case 'genericRadio_rcswitchdetect':
-                    if($conf->get('plugin_genericRadio_receiver_pin') == ""){
+            if ($conf->get('plugin_genericRadio_receiver_pin') == "") {
                         $conf->put('plugin_genericRadio_receiver_pin', 7);
-                    }
-                    $cmd = dirname(__FILE__).'/RCreceive '.$conf->get('plugin_genericRadio_receiver_pin');
-                    $answer = system($cmd,$out);
-                    if($answer != "Wrong GPIO" && $out == 1){
+            }
+            $cmd = dirname(__FILE__).'/RCreceive '.$conf->get('plugin_genericRadio_receiver_pin');
+            $answer = system($cmd, $out);
+            if ($answer != "Wrong GPIO" && $out == 1) {
                         echo "Check Permissions";
-                    }
-                    break;
+            }
+            break;
 
         case 'genericRadio_chacondetect':
-                     if($conf->get('plugin_genericRadio_receiver_pin') == ""){
+            if ($conf->get('plugin_genericRadio_receiver_pin') == "") {
                         $conf->put('plugin_genericRadio_receiver_pin', 7);
-                    }
-                    $cmd = dirname(__FILE__).'/HEreceive '.$conf->get('plugin_genericRadio_receiver_pin');
-                    $answer = system($cmd,$out);
-                    if($answer != "Wrong GPIO" && $out == 1){
+            }
+            $cmd = dirname(__FILE__).'/HEreceive '.$conf->get('plugin_genericRadio_receiver_pin');
+            $answer = system($cmd, $out);
+            if ($answer != "Wrong GPIO" && $out == 1) {
                         echo "Check Permissions";
-                    }
-        break;
+            }
+            break;
     }
 }
 
@@ -526,8 +499,8 @@ function genericRadio_plugin_setting_page()
                             <label for="radioCodeGenericRadioOff">Code radio OFF</label>
                             <input type="text" value="<?php echo $selected->radiocodeOff; ?>" name="radioCodeGenericRadioOff" id="radioCodeGenericRadioOff" placeholder="1:1234" />
                             <div class="input-append">
-                                <span onclick="detectcode(this,'radioCodeGenericRadioOff','rcswitch')" class="btn">SCAN RCSwitch</span>
-                                <span onclick="detectcode(this,'radioCodeGenericRadioOff','chacon')" class="btn">SCAN Chacon</span>
+                                <span onclick="plugin_genericradio_detectcode(this,'radioCodeGenericRadioOff','rcswitch')" class="btn">SCAN RCSwitch</span>
+                                <span onclick="plugin_genericradio_detectcode(this,'radioCodeGenericRadioOff','chacon')" class="btn">SCAN Chacon</span>
                             </div>
                             <label for="onGenericRadio">Commande vocale "ON" associée</label>
                             <?php echo $conf->get('VOCAL_ENTITY_NAME') ?>, <input type="text" id="onGenericRadio" value="<?php echo $selected->onCommand; ?>" placeholder="Allume la lumière, Ouvre le volet…"/>
@@ -590,11 +563,11 @@ function genericRadio_plugin_setting_page()
                                 </td>
                             </tr>
                             <?php
-}                               
+}
 $exportRadios = $genericRadios;
-foreach($exportRadios as $key => $exportRadio){
-unset($exportRadios[$key]->id);
-unset($exportRadios[$key]->state);
+foreach ($exportRadios as $key => $exportRadio) {
+    unset($exportRadios[$key]->id);
+    unset($exportRadios[$key]->state);
 }
                             ?>
                         </table>
@@ -602,7 +575,7 @@ unset($exportRadios[$key]->state);
                
                 <legend>Exporter vos relais existants</legend>
                 <textarea cols="100" ><?php echo json_encode($exportRadios); ?></textarea>
-                <legend>Importer de nouveaux relais</legend>
+                <legend>Importer de nouveaux relais <a href="http://maditnerd.github.io/genericRadio">Liste des prises compatibles</a></legend>
                 <div class="import">
                 <textarea id="import" name="import" cols="100" ></textarea>
                 
@@ -658,7 +631,8 @@ function genericRadio_plugin_preference_page()
 ?>
 
                     <?php
-                            if(fileperms(Plugin::path().'RCsend')!='36333'){ ?>
+                    if (fileperms(Plugin::path().'RCsend')!='36333') {
+                        ?>
                             <div class="flatBloc pink-color">
                                 <b>RCsend</b> n'a pas les permissions pour envoyer des codes radios<br>
                                 Tapez ceci dans un terminal pour résoudre ce problème:
@@ -668,9 +642,11 @@ function genericRadio_plugin_preference_page()
                                 </code>
 
                             </div>
-                            <?php } ?>
+                            <?php
+                    } ?>
 
-                            <?php  if(fileperms(Plugin::path().'RCreceive')!='36333'){ ?>
+                            <?php  if (fileperms(Plugin::path().'RCreceive')!='36333') {
+                                ?>
                                 <div class="flatBloc pink-color">
                                     <b>RCreceive</b> n'a pas les permissions pour recevoir des codes radios RCSwitch<br>
                                     Tapez ceci dans un terminal pour résoudre ce problème:
@@ -680,8 +656,10 @@ function genericRadio_plugin_preference_page()
                                     </code>
 
                                 </div>
-                            <?php } ?>
-                            <?php  if(fileperms(Plugin::path().'HEreceive')!='36333'){ ?>
+                            <?php
+} ?>
+                            <?php  if (fileperms(Plugin::path().'HEreceive')!='36333') {
+                                ?>
                                 <div class="flatBloc pink-color">
                                     <b>HEreceive</b> n'a pas les permissions pour recevoir des codes radios Chacon<br>
                                     Tapez ceci dans un terminal pour résoudre ce problème:
@@ -691,7 +669,8 @@ function genericRadio_plugin_preference_page()
                                     </code>
 
                                 </div>
-                            <?php } ?>
+                            <?php
+} ?>
 
                                 <a class="btn btn-warning" href="setting.php?section=genericRadio">Liste relais</a>
                                 <div class="settings">
@@ -715,7 +694,9 @@ function genericRadio_plugin_preference_page()
                         </div>
                     </div>
 
-                    <?php } else { ?>
+                    <?php
+        } else {
+            ?>
 
                     <div id="main" class="wrapper clearfix">
                         <article>
@@ -724,9 +705,9 @@ function genericRadio_plugin_preference_page()
                     </div>
                     <?php
 
-}
-            }
         }
+    }
+}
 
 
 
