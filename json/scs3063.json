@@ -1,1 +1,162 @@
-[{"name":"I1","description":"SCS-3063","room":"1","offCommand":"","onCommand":"","icon":"fa fa-flash","radiocodeOn":"1:1381716","radiocodeOff":"1:1381717"},{"name":"I2","description":"SCS-3063","room":"1","offCommand":"","onCommand":"","icon":"fa fa-flash","radiocodeOn":"1:1394005","radiocodeOff":"1:1394004"},{"name":"I3","description":"SCS-3063","room":"1","offCommand":"","onCommand":"","icon":"fa fa-flash","radiocodeOn":"1:1397077","radiocodeOff":"1:1397076"},{"name":"I4","description":"SCS-3063","room":"1","offCommand":"","onCommand":"","icon":"fa fa-flash","radiocodeOn":"1:1397845","radiocodeOff":"1:1397844"},{"name":"II1","description":"SCS-3063","room":"1","offCommand":"","onCommand":"","icon":"fa fa-flash","radiocodeOn":"1:4527445","radiocodeOff":"1:4527444"},{"name":"II2","description":"SCS-3063","room":"1","offCommand":"","onCommand":"","icon":"fa fa-flash","radiocodeOn":"1:4539733","radiocodeOff":"1:4539732"},{"name":"II3","description":"SCS-3063","room":"1","offCommand":"","onCommand":"","icon":"fa fa-flash","radiocodeOn":"1:4542805","radiocodeOff":"1:4542804"},{"name":"II4","description":"SCS-3063","room":"1","offCommand":"","onCommand":"","icon":"fa fa-flash","radiocodeOn":"1:4543573","radiocodeOff":"1:4543572"},{"name":"III1","description":"SCS-3063","room":"1","offCommand":"","onCommand":"","icon":"fa fa-flash","radiocodeOn":"1:5313876","radiocodeOff":"1:5313877"},{"name":"III2","description":"SCS-3063","room":"1","offCommand":"","onCommand":"","icon":"fa fa-flash","radiocodeOn":"1:5326164","radiocodeOff":"1:5326165"},{"name":"III3","description":"SCS-3063","room":"1","offCommand":"","onCommand":"","icon":"fa fa-flash","radiocodeOn":"1:5329236","radiocodeOff":"1:5329237"},{"name":"III4","description":"SCS-3063","room":"1","offCommand":"","onCommand":"","icon":"fa fa-flash","radiocodeOn":"1:5330004","radiocodeOff":"1:5330005"},{"name":"IV1","description":"SCS-3063","room":"1","offCommand":"","onCommand":"","icon":"fa fa-flash","radiocodeOn":"1:5510485","radiocodeOff":"1:5510484"},{"name":"IV2","description":"SCS-3063","room":"1","offCommand":"","onCommand":"","icon":"fa fa-flash","radiocodeOn":"1:5522773","radiocodeOff":"1:5522772"},{"name":"IV3","description":"SCS-3063","room":"1","offCommand":"","onCommand":"","icon":"fa fa-flash","radiocodeOn":"1:5525845","radiocodeOff":"1:5525844"},{"name":"IV4","description":"SCS-3063","room":"1","offCommand":"","onCommand":"","icon":"fa fa-flash","radiocodeOn":"1:5526613","radiocodeOff":"1:5526612"}]
+[
+   {
+      "name":"I1",
+      "description":"SCS-3063",
+      "room":"1",
+      "offCommand":"",
+      "onCommand":"",
+      "icon":"fa fa-flash",
+      "radiocodeOn":"1:1381716",
+      "radiocodeOff":"1:1381717"
+   },
+   {
+      "name":"I2",
+      "description":"SCS-3063",
+      "room":"1",
+      "offCommand":"",
+      "onCommand":"",
+      "icon":"fa fa-flash",
+      "radiocodeOn":"1:1394005",
+      "radiocodeOff":"1:1394004"
+   },
+   {
+      "name":"I3",
+      "description":"SCS-3063",
+      "room":"1",
+      "offCommand":"",
+      "onCommand":"",
+      "icon":"fa fa-flash",
+      "radiocodeOn":"1:1397077",
+      "radiocodeOff":"1:1397076"
+   },
+   {
+      "name":"I4",
+      "description":"SCS-3063",
+      "room":"1",
+      "offCommand":"",
+      "onCommand":"",
+      "icon":"fa fa-flash",
+      "radiocodeOn":"1:1397845",
+      "radiocodeOff":"1:1397844"
+   },
+   {
+      "name":"II1",
+      "description":"SCS-3063",
+      "room":"1",
+      "offCommand":"",
+      "onCommand":"",
+      "icon":"fa fa-flash",
+      "radiocodeOn":"1:4527445",
+      "radiocodeOff":"1:4527444"
+   },
+   {
+      "name":"II2",
+      "description":"SCS-3063",
+      "room":"1",
+      "offCommand":"",
+      "onCommand":"",
+      "icon":"fa fa-flash",
+      "radiocodeOn":"1:4539733",
+      "radiocodeOff":"1:4539732"
+   },
+   {
+      "name":"II3",
+      "description":"SCS-3063",
+      "room":"1",
+      "offCommand":"",
+      "onCommand":"",
+      "icon":"fa fa-flash",
+      "radiocodeOn":"1:4542805",
+      "radiocodeOff":"1:4542804"
+   },
+   {
+      "name":"II4",
+      "description":"SCS-3063",
+      "room":"1",
+      "offCommand":"",
+      "onCommand":"",
+      "icon":"fa fa-flash",
+      "radiocodeOn":"1:4543573",
+      "radiocodeOff":"1:4543572"
+   },
+   {
+      "name":"III1",
+      "description":"SCS-3063",
+      "room":"1",
+      "offCommand":"",
+      "onCommand":"",
+      "icon":"fa fa-flash",
+      "radiocodeOn":"1:5313876",
+      "radiocodeOff":"1:5313877"
+   },
+   {
+      "name":"III2",
+      "description":"SCS-3063",
+      "room":"1",
+      "offCommand":"",
+      "onCommand":"",
+      "icon":"fa fa-flash",
+      "radiocodeOn":"1:5326164",
+      "radiocodeOff":"1:5326165"
+   },
+   {
+      "name":"III3",
+      "description":"SCS-3063",
+      "room":"1",
+      "offCommand":"",
+      "onCommand":"",
+      "icon":"fa fa-flash",
+      "radiocodeOn":"1:5329236",
+      "radiocodeOff":"1:5329237"
+   },
+   {
+      "name":"III4",
+      "description":"SCS-3063",
+      "room":"1",
+      "offCommand":"",
+      "onCommand":"",
+      "icon":"fa fa-flash",
+      "radiocodeOn":"1:5330004",
+      "radiocodeOff":"1:5330005"
+   },
+   {
+      "name":"IV1",
+      "description":"SCS-3063",
+      "room":"1",
+      "offCommand":"",
+      "onCommand":"",
+      "icon":"fa fa-flash",
+      "radiocodeOn":"1:5510485",
+      "radiocodeOff":"1:5510484"
+   },
+   {
+      "name":"IV2",
+      "description":"SCS-3063",
+      "room":"1",
+      "offCommand":"",
+      "onCommand":"",
+      "icon":"fa fa-flash",
+      "radiocodeOn":"1:5522773",
+      "radiocodeOff":"1:5522772"
+   },
+   {
+      "name":"IV3",
+      "description":"SCS-3063",
+      "room":"1",
+      "offCommand":"",
+      "onCommand":"",
+      "icon":"fa fa-flash",
+      "radiocodeOn":"1:5525845",
+      "radiocodeOff":"1:5525844"
+   },
+   {
+      "name":"IV4",
+      "description":"SCS-3063",
+      "room":"1",
+      "offCommand":"",
+      "onCommand":"",
+      "icon":"fa fa-flash",
+      "radiocodeOn":"1:5526613",
+      "radiocodeOff":"1:5526612"
+   }
+]

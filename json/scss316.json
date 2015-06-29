@@ -1,1 +1,242 @@
-[{"name":"A1","description":"SCS-S316","room":"1","offCommand":"","onCommand":"","icon":"fa fa-flash","radiocodeOn":"1:1398083","radiocodeOff":"1:1398092"},{"name":"A2","description":"SCS-S316","room":"1","offCommand":"","onCommand":"","icon":"fa fa-flash","radiocodeOn":"1:1398035","radiocodeOff":"1:1398044"},{"name":"A3","description":"SCS-S316","room":"1","offCommand":"","onCommand":"","icon":"fa fa-flash","radiocodeOn":"1:1397843","radiocodeOff":"1:1397852"},{"name":"A4","description":"SCS-S316","room":"1","offCommand":"","onCommand":"","icon":"fa fa-flash","radiocodeOn":"1:1397075","radiocodeOff":"1:1397084"},{"name":"B1","description":"SCS-S316","room":"1","offCommand":"","onCommand":"","icon":"fa fa-flash","radiocodeOn":"1:4543811","radiocodeOff":"1:4543820"},{"name":"B2","description":"SCS-S316","room":"1","offCommand":"","onCommand":"","icon":"fa fa-flash","radiocodeOn":"1:4543763","radiocodeOff":"1:4543772"},{"name":"B3","description":"SCS-S316","room":"1","offCommand":"","onCommand":"","icon":"fa fa-flash","radiocodeOn":"1:4543571","radiocodeOff":"1:4543580"},{"name":"B4","description":"SCS-S316","room":"1","offCommand":"","onCommand":"","icon":"fa fa-flash","radiocodeOn":"1:4542803","radiocodeOff":"1:4542812"},{"name":"C1","description":"SCS-S316","room":"1","offCommand":"","onCommand":"","icon":"fa fa-flash","radiocodeOn":"1:5330243","radiocodeOff":"1:5330252"},{"name":"C2","description":"SCS-S316","room":"1","offCommand":"","onCommand":"","icon":"fa fa-flash","radiocodeOn":"1:5330195","radiocodeOff":"1:5330204"},{"name":"C3","description":"SCS-S316","room":"1","offCommand":"","onCommand":"","icon":"fa fa-flash","radiocodeOn":"1:5330003","radiocodeOff":"1:5330012"},{"name":"C4","description":"SCS-S316","room":"1","offCommand":"","onCommand":"","icon":"fa fa-flash","radiocodeOn":"1:5329235","radiocodeOff":"1:5329244"},{"name":"D1","description":"SCS-S316","room":"1","offCommand":"","onCommand":"","icon":"fa fa-flash","radiocodeOn":"1:5526851","radiocodeOff":"1:5526860"},{"name":"D2","description":"SCS-S316","room":"1","offCommand":"","onCommand":"","icon":"fa fa-flash","radiocodeOn":"1:5526803","radiocodeOff":"1:5526812"},{"name":"D3","description":"SCS-S316","room":"1","offCommand":"","onCommand":"","icon":"fa fa-flash","radiocodeOn":"1:5526611","radiocodeOff":"1:5526620"},{"name":"D4","description":"SCS-S316","room":"1","offCommand":"","onCommand":"","icon":"fa fa-flash","radiocodeOn":"1:5525843","radiocodeOff":"1:5525852"},{"name":"E1","description":"SCS-S316","room":"1","offCommand":"","onCommand":"","icon":"fa fa-flash","radiocodeOn":"1:5576003","radiocodeOff":"1:5576012"},{"name":"E2","description":"SCS-S316","room":"1","offCommand":"","onCommand":"","icon":"fa fa-flash","radiocodeOn":"1:5575955","radiocodeOff":"1:5575964"},{"name":"E3","description":"SCS-S316","room":"1","offCommand":"","onCommand":"","icon":"fa fa-flash","radiocodeOn":"1:5575763","radiocodeOff":"1:5575772"},{"name":"E4","description":"SCS-S316","room":"1","offCommand":"","onCommand":"","icon":"fa fa-flash","radiocodeOn":"1:5574995","radiocodeOff":"1:5575004"},{"name":"F1","description":"SCS-S316","room":"1","offCommand":"","onCommand":"","icon":"fa fa-flash","radiocodeOn":"1:5588291","radiocodeOff":"1:5588300"},{"name":"F2","description":"SCS-S316","room":"1","offCommand":"","onCommand":"","icon":"fa fa-flash","radiocodeOn":"1:5588243","radiocodeOff":"1:5588252"},{"name":"F3","description":"SCS-S316","room":"1","offCommand":"","onCommand":"","icon":"fa fa-flash","radiocodeOn":"1:5588051","radiocodeOff":"1:5588060"},{"name":"F4","description":"SCS-S316","room":"1","offCommand":"","onCommand":"","icon":"fa fa-flash","radiocodeOn":"1:5587283","radiocodeOff":"1:5587292"}]
+[
+   {
+      "name":"A1",
+      "description":"SCS-S316",
+      "room":"1",
+      "offCommand":"",
+      "onCommand":"",
+      "icon":"fa fa-flash",
+      "radiocodeOn":"1:1398083",
+      "radiocodeOff":"1:1398092"
+   },
+   {
+      "name":"A2",
+      "description":"SCS-S316",
+      "room":"1",
+      "offCommand":"",
+      "onCommand":"",
+      "icon":"fa fa-flash",
+      "radiocodeOn":"1:1398035",
+      "radiocodeOff":"1:1398044"
+   },
+   {
+      "name":"A3",
+      "description":"SCS-S316",
+      "room":"1",
+      "offCommand":"",
+      "onCommand":"",
+      "icon":"fa fa-flash",
+      "radiocodeOn":"1:1397843",
+      "radiocodeOff":"1:1397852"
+   },
+   {
+      "name":"A4",
+      "description":"SCS-S316",
+      "room":"1",
+      "offCommand":"",
+      "onCommand":"",
+      "icon":"fa fa-flash",
+      "radiocodeOn":"1:1397075",
+      "radiocodeOff":"1:1397084"
+   },
+   {
+      "name":"B1",
+      "description":"SCS-S316",
+      "room":"1",
+      "offCommand":"",
+      "onCommand":"",
+      "icon":"fa fa-flash",
+      "radiocodeOn":"1:4543811",
+      "radiocodeOff":"1:4543820"
+   },
+   {
+      "name":"B2",
+      "description":"SCS-S316",
+      "room":"1",
+      "offCommand":"",
+      "onCommand":"",
+      "icon":"fa fa-flash",
+      "radiocodeOn":"1:4543763",
+      "radiocodeOff":"1:4543772"
+   },
+   {
+      "name":"B3",
+      "description":"SCS-S316",
+      "room":"1",
+      "offCommand":"",
+      "onCommand":"",
+      "icon":"fa fa-flash",
+      "radiocodeOn":"1:4543571",
+      "radiocodeOff":"1:4543580"
+   },
+   {
+      "name":"B4",
+      "description":"SCS-S316",
+      "room":"1",
+      "offCommand":"",
+      "onCommand":"",
+      "icon":"fa fa-flash",
+      "radiocodeOn":"1:4542803",
+      "radiocodeOff":"1:4542812"
+   },
+   {
+      "name":"C1",
+      "description":"SCS-S316",
+      "room":"1",
+      "offCommand":"",
+      "onCommand":"",
+      "icon":"fa fa-flash",
+      "radiocodeOn":"1:5330243",
+      "radiocodeOff":"1:5330252"
+   },
+   {
+      "name":"C2",
+      "description":"SCS-S316",
+      "room":"1",
+      "offCommand":"",
+      "onCommand":"",
+      "icon":"fa fa-flash",
+      "radiocodeOn":"1:5330195",
+      "radiocodeOff":"1:5330204"
+   },
+   {
+      "name":"C3",
+      "description":"SCS-S316",
+      "room":"1",
+      "offCommand":"",
+      "onCommand":"",
+      "icon":"fa fa-flash",
+      "radiocodeOn":"1:5330003",
+      "radiocodeOff":"1:5330012"
+   },
+   {
+      "name":"C4",
+      "description":"SCS-S316",
+      "room":"1",
+      "offCommand":"",
+      "onCommand":"",
+      "icon":"fa fa-flash",
+      "radiocodeOn":"1:5329235",
+      "radiocodeOff":"1:5329244"
+   },
+   {
+      "name":"D1",
+      "description":"SCS-S316",
+      "room":"1",
+      "offCommand":"",
+      "onCommand":"",
+      "icon":"fa fa-flash",
+      "radiocodeOn":"1:5526851",
+      "radiocodeOff":"1:5526860"
+   },
+   {
+      "name":"D2",
+      "description":"SCS-S316",
+      "room":"1",
+      "offCommand":"",
+      "onCommand":"",
+      "icon":"fa fa-flash",
+      "radiocodeOn":"1:5526803",
+      "radiocodeOff":"1:5526812"
+   },
+   {
+      "name":"D3",
+      "description":"SCS-S316",
+      "room":"1",
+      "offCommand":"",
+      "onCommand":"",
+      "icon":"fa fa-flash",
+      "radiocodeOn":"1:5526611",
+      "radiocodeOff":"1:5526620"
+   },
+   {
+      "name":"D4",
+      "description":"SCS-S316",
+      "room":"1",
+      "offCommand":"",
+      "onCommand":"",
+      "icon":"fa fa-flash",
+      "radiocodeOn":"1:5525843",
+      "radiocodeOff":"1:5525852"
+   },
+   {
+      "name":"E1",
+      "description":"SCS-S316",
+      "room":"1",
+      "offCommand":"",
+      "onCommand":"",
+      "icon":"fa fa-flash",
+      "radiocodeOn":"1:5576003",
+      "radiocodeOff":"1:5576012"
+   },
+   {
+      "name":"E2",
+      "description":"SCS-S316",
+      "room":"1",
+      "offCommand":"",
+      "onCommand":"",
+      "icon":"fa fa-flash",
+      "radiocodeOn":"1:5575955",
+      "radiocodeOff":"1:5575964"
+   },
+   {
+      "name":"E3",
+      "description":"SCS-S316",
+      "room":"1",
+      "offCommand":"",
+      "onCommand":"",
+      "icon":"fa fa-flash",
+      "radiocodeOn":"1:5575763",
+      "radiocodeOff":"1:5575772"
+   },
+   {
+      "name":"E4",
+      "description":"SCS-S316",
+      "room":"1",
+      "offCommand":"",
+      "onCommand":"",
+      "icon":"fa fa-flash",
+      "radiocodeOn":"1:5574995",
+      "radiocodeOff":"1:5575004"
+   },
+   {
+      "name":"F1",
+      "description":"SCS-S316",
+      "room":"1",
+      "offCommand":"",
+      "onCommand":"",
+      "icon":"fa fa-flash",
+      "radiocodeOn":"1:5588291",
+      "radiocodeOff":"1:5588300"
+   },
+   {
+      "name":"F2",
+      "description":"SCS-S316",
+      "room":"1",
+      "offCommand":"",
+      "onCommand":"",
+      "icon":"fa fa-flash",
+      "radiocodeOn":"1:5588243",
+      "radiocodeOff":"1:5588252"
+   },
+   {
+      "name":"F3",
+      "description":"SCS-S316",
+      "room":"1",
+      "offCommand":"",
+      "onCommand":"",
+      "icon":"fa fa-flash",
+      "radiocodeOn":"1:5588051",
+      "radiocodeOff":"1:5588060"
+   },
+   {
+      "name":"F4",
+      "description":"SCS-S316",
+      "room":"1",
+      "offCommand":"",
+      "onCommand":"",
+      "icon":"fa fa-flash",
+      "radiocodeOn":"1:5587283",
+      "radiocodeOff":"1:5587292"
+   }
+]
