@@ -30,7 +30,7 @@ Importer
 ## SCS S316
 [Détails / Liens](http://www.scs-laboutique.com/kit+2+prises+telecommandees+s316+2+3600w-116)
 
-![S316](https://raw.githubusercontent.com/maditnerd/genericRadio/master/img/S316.jpg)
+![S316](https://raw.githubusercontent.com/maditnerd/genericRadio/master/img/s316.jpg)
 
 Importer
 ```json
