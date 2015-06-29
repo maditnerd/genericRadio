@@ -1,0 +1,19 @@
+<?php
+/* 
+	Le code contenu dans cette page ne sera éxecuté qu'à la désactivation du plugin 
+	Vous pouvez donc l'utiliser pour supprimer des tables SQLite, des dossiers, ou executer une action
+	qui ne doit se lancer qu'à la désinstallation ex :
+*/
+require_once(dirname(__FILE__).'/GenericRadio.class.php');
+require_once(dirname(__FILE__).'/../dashboard/Widget.class.php');
+
+$table = new GenericRadio();
+$table->drop();
+Section::remove('plugin_genericradio');
+
+$conf = new Configuration();
+$conf->delete(array('key'=>'plugin_genericRadio_emitter_pin'));
+
+$dash = new Widget();
+$dash->delete(array('model'=>'dash_genericradio'));
+?>

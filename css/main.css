@@ -1,0 +1,8 @@
+/* Fichier de style CSS réservé à votre plugin*/
+.genericRadioLight{
+	font-size: 30px;
+}
+
+.genericRadioLight.genericRadioLight-active{
+	color:yellow;
+}
